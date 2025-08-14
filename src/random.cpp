@@ -1,5 +1,5 @@
 /* ------------------------------------
- * File:      main.cpp
+ * File:      random.cpp
  * Path:      src/
  * Purpose:   Random number generation
  *
