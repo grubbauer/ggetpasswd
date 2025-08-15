@@ -19,7 +19,6 @@ std::string getpasswd(int length) {
   int counter = 0;
   int frowner; /* Variable that is used to determine what array to choose from */
   std::string passwd;
-  /* On the first run it shall use a lowercase letter */
 
   passwd = alphabet[grandom::number(0, 25)];
   counter++;
@@ -27,7 +26,6 @@ std::string getpasswd(int length) {
   while (counter < length) {
     counter++;
 
-    /* Getting the random variable */
     frowner = grandom::number(0, 3);
 
     switch (frowner) {
