@@ -9,7 +9,7 @@
  * Copyright: (c) 2025 Raphael G. Grubbauer
  */
 
-#define VERSION "0.1"
+#define VERSION "1.0.0"
 
 #include <iostream>
 
@@ -57,9 +57,12 @@ int main(int argc, char* argv[]) {
   } 
 
   int counter = 0;
- 
-  std::string password = prefix + get::getpasswd(length) + suffix;
-  std::cout << password << "\n";
+
+  while (counter < amount) {
+    counter++;
+    std::string password = prefix + get::getpasswd(length) + suffix;
+    std::cout << password << "\n";
+  }
 
   return 0;
 }
