@@ -2,4 +2,6 @@
 build/
 
 compile_commands.json
+include/cxxopts.hpp
 pass.py
+TODO.md
