@@ -9,24 +9,41 @@
  * Copyright: (c) 2025 Raphael G. Grubbauer
  */
 
-#include "random.hpp"
 #include "getpasswd.hpp"
+#include "random.hpp"
 
 #include <string>
 
 namespace get {
-
 std::string getpasswd(int length) {
-
-  int counter;
+  int counter = 0;
+  int frowner; /* Variable that is used to determine what array to choose from */
   std::string passwd;
   /* On the first run it shall use a lowercase letter */
- 
-  passwd = alphabet[grandom::number(0,25)];
+
+  passwd = alphabet[grandom::number(0, 25)];
   counter++;
 
   while (counter < length) {
     counter++;
+
+    /* Getting the random variable */
+    frowner = grandom::number(0, 3);
+
+    switch (frowner) {
+      case 0 :{
+        passwd += alphabet[grandom::number(0, 25)];
+      } break;
+      case 1: {
+        passwd += ALPHABET[grandom::number(0, 25)];
+      } break;
+      case 2: {
+        passwd += numbers[grandom::number(0, 9)];
+      } break;
+      case 3: {
+        passwd += symbols[grandom::number(0, 6)];
+      } break;
+    }
   }
   return passwd;
 }
