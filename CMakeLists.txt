@@ -10,4 +10,5 @@ include_directories(include)
 add_executable(ggetpasswd
   src/main.cpp
   src/random.cpp
+  src/getpasswd.cpp
 )
