@@ -26,8 +26,4 @@ check_include_files("random.hpp" HAVE_RANDOM_HPP)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
-  COMMAND strip ${CMAKE_PROJECT_NAME}
-  VERBATIM)
-
 install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION bin)
