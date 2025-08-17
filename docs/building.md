@@ -27,8 +27,17 @@ cd build
 
 Now, create the Makefile and execute it.
 
+### Linux
+
 ```bash
 cmake ..
+cmake --build
+```
+
+### Windows (using MinGW32)
+
+```bash
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../mingw.cmake
 cmake --build
 ```
 
@@ -37,7 +46,7 @@ cmake --build
 To install the binary, simply execute this command inside the build directory:
 
 ```bash
-cmake --install
+cmake --install . --strip
 ```
 
 [cxxopts-link]: https://github.com/jarro2783/cxxopts/tree/v3.3.0
