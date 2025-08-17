@@ -15,7 +15,7 @@ namespace get {
 const std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
 const std::string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const std::string numbers = "1234567890";
-const std::string symbols = "!$%*&@#";
+const std::string symbols = "$%*&@#";
 
 std::string getpasswd(int length);
 }

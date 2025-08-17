@@ -39,7 +39,7 @@ std::string getpasswd(int length) {
         passwd += numbers[grandom::number(0, 9)];
       } break;
       case 3: {
-        passwd += symbols[grandom::number(0, 6)];
+        passwd += symbols[grandom::number(0, 5)];
       } break;
     }
   }
